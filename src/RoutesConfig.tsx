@@ -2,8 +2,9 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Layout from './Layout';
-import Home from './pages/home/Home';
+
 import About from './pages/about/About';
+import { Login } from '@mui/icons-material';
 
 // Define some placeholder components for routes
 
@@ -13,7 +14,7 @@ const RoutesConfig: React.FC = () => {
   return (
     <Routes>
       <Route path="/" element={<Layout />}>
-        <Route index element={<Home />} />
+        <Route index element={<Login/>} />
         <Route path="about" element={<About />} />
       </Route>
     </Routes>

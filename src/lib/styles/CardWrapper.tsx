@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { blue, grey } from '@mui/material/colors';
+import { blue,  } from '@mui/material/colors';
 
 const CardWrapper = styled.div`
 
