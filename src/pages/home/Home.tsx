@@ -1,11 +1,10 @@
 import React from 'react';
 
-interface Props {}
-
-const Home: React.FC<Props> = (props) => {
+const Home: React.FC = () => {
   return (
     <div>
-      Home page
+      <h1>Home</h1>
+      
     </div>
   );
 };

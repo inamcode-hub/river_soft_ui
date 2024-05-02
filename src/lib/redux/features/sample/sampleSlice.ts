@@ -1,5 +1,5 @@
 // Import necessary modules
-import { createSlice, createAsyncThunk, PayloadAction } from '@reduxjs/toolkit';
+import { createSlice, createAsyncThunk, } from '@reduxjs/toolkit';
 import customFetch from '../../../helper/customFetch';
 
 // Define initial state
@@ -20,8 +20,8 @@ export const fetchSampleData = createAsyncThunk(
     try {
       const response = await customFetch.get('/home');
       return response.data;
-    } catch (error) {
-      return thunkAPI.rejectWithValue(error.response?.data ?? "An error occurred");
+    } catch (error: any) {
+      return thunkAPI.rejectWithValue(error.response.data);
     }
   }
 );

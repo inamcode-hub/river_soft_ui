@@ -1,11 +1,10 @@
 import React from 'react';
 
-interface Props {}
-
-const Auth: React.FC<Props> = (props) => {
+const Auth: React.FC = () => {
   return (
     <div>
-      Authntiation page
+      <h1>Auth</h1>
+      
     </div>
   );
 };
