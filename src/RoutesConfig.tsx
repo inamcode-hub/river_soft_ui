@@ -4,7 +4,8 @@ import { Route, Routes } from 'react-router-dom';
 import Layout from './Layout';
 
 import About from './pages/about/About';
-import { Login } from '@mui/icons-material';
+import Login from './pages/auth/Login';
+
 
 // Define some placeholder components for routes
 

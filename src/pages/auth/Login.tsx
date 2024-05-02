@@ -3,7 +3,7 @@ import React from 'react';
 import { TextField, Button,  Link, Typography } from '@mui/material';
 import CardWrapper from '../../lib/styles/CardWrapper';
 import { styled } from '@mui/system';
-const Home: React.FC = () => {
+const Login: React.FC = () => {
   const [email, setEmail] = React.useState('');
   const [password, setPassword] = React.useState('');
 
@@ -77,7 +77,7 @@ const MainContainer = styled('div')`
     
   }
 `;
-export default Home;
+export default Login;
 
       
     
