@@ -9,7 +9,7 @@ const Layout: React.FC = () => {
       {/* This could be a place to add a header, navigation bar, or sidebar */}
       <Outlet />
       {/* This could be a place to add a footer */}
-      hello
+     
     </div>
   );
 };
