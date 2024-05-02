@@ -8,8 +8,8 @@ const CardWrapper = styled.div`
     font-weight: 500;
     margin-bottom: 1rem;
     text-align: center;
-    background-color: ${blue[100]};
-    color: ${blue[900]};
+    background-color: var(--primary-2);
+    color: var(--primary-18);
     padding: 0.5rem 1rem;
     border-radius: 5px;
   }

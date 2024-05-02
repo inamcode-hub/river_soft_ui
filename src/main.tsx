@@ -8,6 +8,8 @@ import theme from './lib/styles/theme'; // Custom theme
 import Provider from './lib/redux/Provider';
 import RoutesConfig from './RoutesConfig';
 import { globalStyles } from './lib/styles/GlobalStyles'; // Import global styles
+import './lib/styles/index.css';
+
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>

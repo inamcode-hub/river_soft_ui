@@ -5,10 +5,10 @@ import { createTheme } from '@mui/material/styles';
 const theme = createTheme({
   palette: {
     primary: {
-      main: '#1976D2',  // Material-UI's primary color
+      main: '#213966',  
     },
     secondary: {
-      main: '#009688', // Material-UI's secondary color
+      main: '#58a645', // Material-UI's secondary color
     },
     
   },
@@ -33,7 +33,7 @@ const theme = createTheme({
     MuiLink: {
       styleOverrides: {
         root: {
-          color: '#1976D2', // Change link color to primary color
+          color: 'var(--primary-18)', // Change link color to primary color
           textDecoration: 'none', // Remove underline from links
           fontWeight: 'bold', // Make links bold
          

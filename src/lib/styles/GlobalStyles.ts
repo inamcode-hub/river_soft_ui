@@ -13,4 +13,5 @@ export const globalStyles = {
    //link
    
   },
+  
 };
