@@ -52,7 +52,7 @@ const Login: React.FC = () => {
       {/* ============Body========== */}
       {/* ============Footer========== */}
       <div className="footer">
-      <Button variant="contained" color="primary" fullWidth onClick={handleLogin}>
+      <Button variant="contained" color="primary" size='large' fullWidth onClick={handleLogin}>
         Sign In
       </Button>
       </div>
