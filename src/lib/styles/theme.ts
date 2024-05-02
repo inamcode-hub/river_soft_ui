@@ -5,16 +5,16 @@ import { createTheme } from '@mui/material/styles';
 const theme = createTheme({
   palette: {
     primary: {
-      main: '#FF6347', // Tomato color
+      main: '#1976D2',  // Material-UI's primary color
     },
     secondary: {
-      main: '#4CAF50', // Green color
+      main: '#009688', // Material-UI's secondary color
     },
   },
   typography: {
     fontFamily: 'Roboto, Arial, sans-serif', // Default font family
     h1: {
-      fontSize: '2rem', // Custom H1 font size
+      fontSize: '6rem', // same as h1 in Material-UI
     },
   },
   components: {
