@@ -2,6 +2,8 @@
 
 This application is designed using React, TypeScript, Styled Components, and Ant Design. It features a login system and contains business logic inside the app. The application communicates with a REST API for data interaction.
 
+The application is deployed on Vercel and the link to the live application can be found in the About section. It has a CI/CD pipeline set up for continuous integration and deployment.
+
 ## Technologies Used
 
 - React: A JavaScript library for building user interfaces.
