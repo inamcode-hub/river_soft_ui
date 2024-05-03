@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <link
+      rel="manifest"
+      href="/manifest.json" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <title>River Soft</title>
+    <script type="module" crossorigin src="/assets/index-BOQEMZJM.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-CYi2JP9I.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  <!-- script for PWA  -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker
+        .register('/sw.js', { scope: '/' })
+        .then(() => console.log('Service Worker registered successfully.'))
+        .catch((error) =>
+          console.log('Service Worker registration failed:', error)
+        );
+    }
+  </script>
+  <!-- script for PWA  -->
+  </body>
+</html>
