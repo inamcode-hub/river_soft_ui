@@ -12,6 +12,7 @@ The application is deployed on Vercel and the link to the live application is [r
 - Emotion: A performant and flexible CSS-in-JS library. Building on many other CSS-in-JS libraries, it allows you to style apps quickly with string or object styles.
 - Material-UI: A popular React UI framework with a set of React components that implement Google's Material Design.
 - Redux Toolkit: The official, opinionated, batteries-included toolset for efficient Redux development.
+- Auth0: An easy to implement, adaptable authentication and authorization platform.
 - Stripe: A suite of payment APIs that powers commerce for online businesses of all sizes.
 - Axios: A promise-based HTTP client for the browser and node.js.
 - React Router: A collection of navigational components that compose declaratively with your application.
