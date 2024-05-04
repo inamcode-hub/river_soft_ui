@@ -1,84 +1,48 @@
-// Import necessary modules
 import React from 'react';
-import { TextField, Button,  Link, Typography } from '@mui/material';
-import CardWrapper from '../../lib/styles/CardWrapper';
-import { styled } from '@mui/system';
-const Login: React.FC = () => {
-  const [email, setEmail] = React.useState('');
-  const [password, setPassword] = React.useState('');
+import { useAuth0 } from '@auth0/auth0-react';
+import { useNavigate } from 'react-router-dom';
+import { Button, CircularProgress, Typography, Box, Container, Grid, Card, CardContent } from '@mui/material';
+import LoginButton from '../../components/LoginButton';
 
-  const handleLogin = () => {
-    // Implement your login logic here
-    console.log('Logging in with email:', email, 'and password:', password);
-  };
+const LoginHome: React.FC = () => {
+  const { isAuthenticated, isLoading } = useAuth0();
+  const navigate = useNavigate();
+
+  React.useEffect(() => {
+    if (!isLoading && isAuthenticated) {
+      navigate('/about', { replace: true });
+    }
+  }, [isAuthenticated, isLoading, navigate]);
+
+  if (isLoading) {
+    return (
+      <Container sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
+        <CircularProgress />
+      </Container>
+    );
+  }
 
   return (
-    <MainContainer>
-   <CardWrapper>
-    {/* ============Header========== */}
-      <div className="header">
-      <Typography variant="h1" className="title">
-        Sign In
-      </Typography>
-      
-      </div>
-      {/* ============Header========== */}
-      {/* ============Body========== */}
-      <div className="body">
-     
-        <div className="content">
-        <Typography variant="body2">
-        New User ? <Link href="#">Create an account</Link>
-      </Typography>
-        <TextField
-        label="Email Address"
-        fullWidth
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-      />
-      <TextField
-        label="Password"
-        fullWidth
-        type="password"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-      />
-       <Typography variant="body2" align="right">
-        <Link href="#">Forgot password?</Link>
-      </Typography>
-      </div>
-
-      </div>
-      {/* ============Body========== */}
-      {/* ============Footer========== */}
-      <div className="footer">
-      <Button variant="contained" color="primary" size='large' fullWidth onClick={handleLogin}>
-        Sign In
-      </Button>
-      </div>
-      {/* ============Footer========== */}
-    </CardWrapper>
-</MainContainer>
+    <Container>
+      <Grid container justifyContent="center" alignItems="center" sx={{ height: '100vh' }}>
+        <Grid item xs={12} md={6}>
+          <Card elevation={6}>
+            <CardContent>
+              <Typography variant="h4" align="center" gutterBottom>
+                Welcome Aboard!
+              </Typography>
+              <Typography variant="subtitle1" align="center" gutterBottom>
+                Journey into the digital realm of River Soft. Your portal awaits, ready to unlock a world of possibilities.
+              </Typography>
+              <Box mt={2} display="flex" justifyContent="center">
+                <LoginButton />
+              </Box>
+            </CardContent>
+          </Card>
+        </Grid>
+      </Grid>
+    </Container>
   );
 };
 
-const MainContainer = styled('div')`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  .body{
-    padding: 1rem 0;
-    .content{
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-    
-  }
-`;
-export default Login;
-
-      
-    
-     
+export default LoginHome;
