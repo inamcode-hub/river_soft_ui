@@ -8,7 +8,7 @@ const LogoutButton: React.FC  = () => {
     const { logout } = useAuth0();
 
     return (
-        <Button variant="contained" color="primary" onClick={() => logout({ returnTo: window.location.origin } as LogoutOptions)}>
+        <Button variant="contained" color="primary" fullWidth onClick={() => logout({ returnTo: window.location.origin } as LogoutOptions)}>
             Log Out
         </Button>
     );
