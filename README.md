@@ -11,11 +11,63 @@ Detailed documentation is available in the `docs` folder:
 - [Technologies Used](docs/technologies.md)
 - [Application Logic](docs/logic.md)
 
-## Quick Start
+## Configuration
 
-1. Clone the repository: `git clone https://github.com/inamdryermaster/river_soft_ui.git`
-2. Install dependencies: `npm install`
-3. Start the application: `npm start`
+The application uses environment variables for configuration. These are stored in a `.env` file. Here's an example of what your `.env` file should look like:
+
+```properties
+# ================== Vite ==================
+# ================== Node.js API ==================
+VITE_API_HOST=https://localhost:3000/api/v1
+# ================== Vercel ==================
+VITE_VERCEL_URL=https://your-vite-app.vercel.app
+# ================== Auth0 ==================
+VITE_AUTH0_DOMAIN=your-auth0-domain
+VITE_AUTH0_CLIENT_ID=your-auth0-client-id
+# ================== System ==================
+VITE_APP_NAME=Your App Name
+VITE_APP_VERSION=1.0.0
+VITE_APP_ENV=development
+
+```
+
+## Installation
+
+Follow these steps to install and run the project:
+
+1. **Clone the repository**
+
+    Use git to clone the repository to your local machine:
+
+    ```bash
+    git clone https://github.com/yourusername/yourrepository.git
+    ```
+
+2. **Navigate to the project directory**
+
+    Change to the project directory:
+
+    ```bash
+    cd yourrepository
+    ```
+
+3. **Install dependencies**
+
+    Use npm (Node Package Manager) to install the project dependencies:
+
+    ```bash
+    npm install
+    ```
+
+4. **Start the application**
+
+    Start the application using npm:
+
+    ```bash
+    npm start
+    ```
+
+The application should now be running on `localhost:3000` (or your specified port).
 
 ## Contributing
 
