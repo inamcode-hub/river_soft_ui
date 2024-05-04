@@ -43,15 +43,7 @@ Follow these steps to install and run the project:
     git clone https://github.com/inamdryermaster/river_soft_ui
     ```
 
-2. **Navigate to the project directory**
-
-    Change to the project directory:
-
-    ```bash
-    cd vite_frontend
-    ```
-
-3. **Install dependencies**
+2. **Install dependencies**
 
     Use npm (Node Package Manager) to install the project dependencies:
 
@@ -59,7 +51,7 @@ Follow these steps to install and run the project:
     npm install
     ```
 
-4. **Build the application**
+3. **Build the application**
 
     Build the application using npm:
 
@@ -67,7 +59,7 @@ Follow these steps to install and run the project:
     npm run build
     ```
 
-5. **Start the application**
+4. **Start the application**
 
     Start the application using npm:
 
