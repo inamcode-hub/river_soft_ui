@@ -48,7 +48,7 @@ Follow these steps to install and run the project:
     Change to the project directory:
 
     ```bash
-    cd yourrepository
+    cd vite_frontend
     ```
 
 3. **Install dependencies**
@@ -59,12 +59,20 @@ Follow these steps to install and run the project:
     npm install
     ```
 
-4. **Start the application**
+4. **Build the application**
+
+    Build the application using npm:
+
+    ```bash
+    npm run build
+    ```
+
+5. **Start the application**
 
     Start the application using npm:
 
     ```bash
-    npm start
+    npm run dev
     ```
 
 The application should now be running on `localhost:3000` (or your specified port).
