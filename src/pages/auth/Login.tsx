@@ -1,7 +1,7 @@
 import React from 'react';
 import { useAuth0 } from '@auth0/auth0-react';
 import { useNavigate } from 'react-router-dom';
-import { Button, CircularProgress, Typography, Box, Container, Grid, Card, CardContent } from '@mui/material';
+import {  CircularProgress, Typography, Box, Container, Grid, Card, CardContent } from '@mui/material';
 import LoginButton from '../../components/LoginButton';
 
 const LoginHome: React.FC = () => {
