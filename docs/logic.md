@@ -33,6 +33,14 @@ The login system of the application requires a [Google OAuth 2.0 API](https://de
 
 When setting up the OAuth 2.0 credentials, you need to specify the authorized JavaScript origins and redirect URIs. For this application, you should add the addresses of Auth0 and localhost to the list of authorized JavaScript origins. This ensures that only requests from these origins are allowed to access the API.
 
+## reCAPTCHA Integration
+
+The application also integrates Google's [reCAPTCHA](https://www.google.com/recaptcha/admin/site/701545478) to protect against automated abusive activities and to ensure only humans can perform certain actions. This adds an additional layer of security and helps to improve the overall user experience.
+
+To set up reCAPTCHA, you need to register your site on the reCAPTCHA admin console. Once registered, you will receive a site key and secret key. These keys are used to integrate reCAPTCHA into your application.
+
+
+
 ### Auth0 Configuration
 
 After setting up the Google OAuth 2.0 API, you need to configure [Auth0](https://auth0.com/). In the Auth0 dashboard, create a new Single Page Application. This will generate a domain and client ID for your application. You can then use these values to authenticate requests from your application.
