@@ -40,7 +40,7 @@ Follow these steps to install and run the project:
     Use git to clone the repository to your local machine:
 
     ```bash
-    git clone https://github.com/yourusername/yourrepository.git
+    git clone https://github.com/inamdryermaster/river_soft_ui
     ```
 
 2. **Navigate to the project directory**
