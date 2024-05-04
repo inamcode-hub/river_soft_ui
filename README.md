@@ -59,7 +59,15 @@ Follow these steps to install and run the project:
     npm run build
     ```
 
-4. **Start the application**
+4. **Run Build**
+
+    Start the application using npm:
+
+    ```bash
+    npm start
+    ```
+
+4. **Run Development**
 
     Start the application using npm:
 
