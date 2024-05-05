@@ -8,18 +8,25 @@ import Callback from './pages/Callback';
 import TestPage from './pages/TestPage';
 import Dashboard from './pages/dashboard/Dashboard';
 import NotFound from './pages/NotFound';
+import LayoutDashboard from './pages/dashboard/LayoutDashboard';
+import Profile from './pages/dashboard/pages/profile/Profile';
+import Settings from './pages/dashboard/pages/settings/Settings';
 
 const RoutesConfig: React.FC = () => {
   return (
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<Login />} />
-        <Route path='TestPage' element={<TestPage />} /> 
+        <Route path="testpage" element={<TestPage />} /> 
         <Route path="callback" element={<Callback />} />
         <Route element={<ProtectedRoute />}>
-          <Route path='dashboard' element={<Dashboard />} />
+          <Route path="dashboard" element={<LayoutDashboard />}>
+            <Route index element={<Dashboard />} />
+            <Route path="profile" element={<Profile />} />
+            <Route path="settings" element={<Settings />} />
+          </Route>
         </Route>
-        <Route path="*" element={<NotFound />} /> {/* Catch-all route for undefined paths */}
+        <Route path="*" element={<NotFound />} /> 
       </Route>
     </Routes>
   );
