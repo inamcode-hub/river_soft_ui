@@ -11,7 +11,7 @@ const LoginHome: React.FC = () => {
 
   React.useEffect(() => {
     if (!isLoading && isAuthenticated) {
-      navigate('/about', { replace: true });
+      navigate('/dashboard', { replace: true });
     }
   }, [isAuthenticated, isLoading, navigate]);
 

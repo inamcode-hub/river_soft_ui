@@ -7,6 +7,7 @@ import ProtectedRoute from './components/ProtectedRoute';
 import Callback from './pages/Callback';
 import TestPage from './pages/TestPage';
 import Dashboard from './pages/dashboard/Dashboard';
+import NotFound from './pages/NotFound';
 
 const RoutesConfig: React.FC = () => {
   return (
@@ -18,6 +19,7 @@ const RoutesConfig: React.FC = () => {
         <Route element={<ProtectedRoute />}>
           <Route path='dashboard' element={<Dashboard />} />
         </Route>
+        <Route path="*" element={<NotFound />} /> {/* Catch-all route for undefined paths */}
       </Route>
     </Routes>
   );
