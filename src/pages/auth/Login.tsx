@@ -1,8 +1,9 @@
 import React from 'react';
 import { useAuth0 } from '@auth0/auth0-react';
 import { useNavigate } from 'react-router-dom';
-import {  CircularProgress, Typography, Box, Container, Grid, Card, CardContent } from '@mui/material';
+import {  Typography, Box, Container, Grid, Card, CardContent } from '@mui/material';
 import LoginButton from '../../components/LoginButton';
+import PageLoading from '../../components/PageLoading';
 
 const LoginHome: React.FC = () => {
   const { isAuthenticated, isLoading } = useAuth0();
@@ -15,11 +16,7 @@ const LoginHome: React.FC = () => {
   }, [isAuthenticated, isLoading, navigate]);
 
   if (isLoading) {
-    return (
-      <Container sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
-        <CircularProgress />
-      </Container>
-    );
+   return <PageLoading />;
   }
 
   return (

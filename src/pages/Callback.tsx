@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useAuth0 } from '@auth0/auth0-react';
 import { useNavigate } from 'react-router-dom';
+import PageLoading from '../components/PageLoading';
 
 const Callback: React.FC = () => {
   const { isLoading, isAuthenticated, error, getAccessTokenSilently } = useAuth0();
@@ -15,7 +16,7 @@ const Callback: React.FC = () => {
          
           const accessToken = await getAccessTokenSilently();
            console.log(`Access Token: ${accessToken}`); // Log the access token
-          navigate('/about');
+          navigate('/dashboard');
         } catch (error) {
           console.error('Failed to fetch access token:', error);
         }
@@ -30,10 +31,7 @@ const Callback: React.FC = () => {
   }, [isLoading, isAuthenticated, error, getAccessTokenSilently, navigate]);
 
   return (
-    <div>
-      {/* You can add a loading indicator here if needed */}
-      Loading...
-    </div>
+    <PageLoading />
   );
 };
 
