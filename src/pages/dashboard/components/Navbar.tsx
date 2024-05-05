@@ -7,6 +7,7 @@ import DashboardIcon from '@mui/icons-material/Dashboard';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import SettingsIcon from '@mui/icons-material/Settings';
 import { styled } from '@mui/material/styles';
+import LogoutButton from '../../../components/LogoutButton';
 
 const drawerWidth = 240;
 
@@ -119,6 +120,7 @@ const Navbar: React.FC = () => {
             </ListItem>
           ))}
         </List>
+        <LogoutButton />
       </Drawer>
       <Main open={open}>
         <DrawerHeader />
