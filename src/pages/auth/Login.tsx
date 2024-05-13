@@ -1,7 +1,14 @@
 import React from 'react';
 import { useAuth0 } from '@auth0/auth0-react';
 import { useNavigate } from 'react-router-dom';
-import {  Typography, Box, Container, Grid, Card, CardContent } from '@mui/material';
+import {
+  Typography,
+  Box,
+  Container,
+  Grid,
+  Card,
+  CardContent,
+} from '@mui/material';
 import LoginButton from '../../components/LoginButton';
 import PageLoading from '../../components/PageLoading';
 
@@ -16,12 +23,17 @@ const LoginHome: React.FC = () => {
   }, [isAuthenticated, isLoading, navigate]);
 
   if (isLoading) {
-   return <PageLoading />;
+    return <PageLoading />;
   }
 
   return (
     <Container>
-      <Grid container justifyContent="center" alignItems="center" sx={{ height: '100vh' }}>
+      <Grid
+        container
+        justifyContent="center"
+        alignItems="center"
+        sx={{ height: '100vh' }}
+      >
         <Grid item xs={12} md={6}>
           <Card elevation={6}>
             <CardContent>
@@ -29,7 +41,8 @@ const LoginHome: React.FC = () => {
                 Welcome Aboard!
               </Typography>
               <Typography variant="subtitle1" align="center" gutterBottom>
-                Journey into the digital realm of River Soft. Your portal awaits, ready to unlock a world of possibilities.
+                Journey into the digital realm of Rivers Soft. Your portal
+                awaits, ready to unlock a world of possibilities.
               </Typography>
               <Box mt={2} display="flex" justifyContent="center">
                 <LoginButton />

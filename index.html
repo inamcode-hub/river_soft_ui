@@ -1,28 +1,26 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <link
-      rel="manifest"
-      href="/manifest.json" />
+    <link rel="manifest" href="/manifest.json" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="initial-scale=1, width=device-width" />
 
-    <title>River Soft</title>
+    <title>Rivers Soft</title>
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
-  <!-- script for PWA  -->
-  <script>
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker
-        .register('/sw.js', { scope: '/' })
-        .then(() => console.log('Service Worker registered successfully.'))
-        .catch((error) =>
-          console.log('Service Worker registration failed:', error)
-        );
-    }
-  </script>
-  <!-- script for PWA  -->
+    <!-- script for PWA  -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker
+          .register('/sw.js', { scope: '/' })
+          .then(() => console.log('Service Worker registered successfully.'))
+          .catch((error) =>
+            console.log('Service Worker registration failed:', error)
+          );
+      }
+    </script>
+    <!-- script for PWA  -->
   </body>
 </html>

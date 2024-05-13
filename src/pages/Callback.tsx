@@ -4,18 +4,18 @@ import { useNavigate } from 'react-router-dom';
 import PageLoading from '../components/PageLoading';
 
 const Callback: React.FC = () => {
-  const { isLoading, isAuthenticated, error, getAccessTokenSilently } = useAuth0();
+  const { isLoading, isAuthenticated, error, getAccessTokenSilently } =
+    useAuth0();
   const navigate = useNavigate();
 
   useEffect(() => {
     const handleAuthentication = async () => {
       if (isLoading) return;
-      
+
       if (isAuthenticated) {
         try {
-         
           const accessToken = await getAccessTokenSilently();
-           console.log(`Access Token: ${accessToken}`); // Log the access token
+          console.log(`Access Token: ${accessToken}`); // Log the access token
           navigate('/dashboard');
         } catch (error) {
           console.error('Failed to fetch access token:', error);
@@ -30,9 +30,7 @@ const Callback: React.FC = () => {
     handleAuthentication();
   }, [isLoading, isAuthenticated, error, getAccessTokenSilently, navigate]);
 
-  return (
-    <PageLoading />
-  );
+  return <PageLoading />;
 };
 
 export default Callback;

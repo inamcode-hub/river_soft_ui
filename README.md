@@ -37,49 +37,49 @@ Follow these steps to install and run the project:
 
 1. **Clone the repository**
 
-    Use git to clone the repository to your local machine:
+   Use git to clone the repository to your local machine:
 
-    ```bash
-    git clone https://github.com/inamdryermaster/river_soft_ui
-    ```
+   ```bash
+   git clone https://github.com/inamdryermaster/river_soft_ui
+   ```
 
 2. **Install dependencies**
 
-    Use npm (Node Package Manager) to install the project dependencies:
+   Use npm (Node Package Manager) to install the project dependencies:
 
-    ```bash
-    npm install
-    ```
+   ```bash
+   npm install
+   ```
 
 3. **Build the application**
 
-    Build the application using npm:
+   Build the application using npm:
 
-    ```bash
-    npm run build
-    ```
+   ```bash
+   npm run build
+   ```
 
 4. **Run Build**
 
-    Start the application using npm:
+   Start the application using npm:
 
-    ```bash
-    npm start
-    ```
+   ```bash
+   npm start
+   ```
 
-4. **Run Development**
+5. **Run Development**
 
-    Start the application using npm:
+   Start the application using npm:
 
-    ```bash
-    npm run dev
-    ```
+   ```bash
+   npm run dev
+   ```
 
 The application should now be running on `localhost:3000` (or your specified port).
 
 ## Contributing
 
-Tony River Soft , Inam 
+Tony Rivers Soft , Inam
 
 ## License
 
