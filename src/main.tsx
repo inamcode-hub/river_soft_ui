@@ -14,24 +14,23 @@ import './lib/styles/index.css';
 const domain = import.meta.env.VITE_AUTH0_DOMAIN;
 const clientId = import.meta.env.VITE_AUTH0_CLIENT_ID;
 
-
-
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
     <Provider>
       <ThemeProvider theme={theme}>
-        <GlobalStyles styles={globalStyles} />  {/* Use global styles */}
+        <GlobalStyles styles={globalStyles} /> {/* Use global styles */}
         <Auth0Provider
           domain={domain}
           clientId={clientId}
           authorizationParams={{
             redirect_uri: `${window.location.origin}/callback`,
-            // Add any other authorization parameters here if needed
+            audience: `https://${domain}/api/v2/`,
+            scope: 'openid profile email',
           }}
         >
-        <Router>
-          <RoutesConfig />
-        </Router>
+          <Router>
+            <RoutesConfig />
+          </Router>
         </Auth0Provider>
       </ThemeProvider>
     </Provider>

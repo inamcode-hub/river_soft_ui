@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import PageLoading from '../components/PageLoading';
 
 const Callback: React.FC = () => {
-  const { isLoading, isAuthenticated, error, getAccessTokenSilently } =
+  const { isLoading, isAuthenticated, error, user, getAccessTokenSilently } =
     useAuth0();
   const navigate = useNavigate();
 
@@ -12,10 +12,14 @@ const Callback: React.FC = () => {
     const handleAuthentication = async () => {
       if (isLoading) return;
 
-      if (isAuthenticated) {
+      if (isAuthenticated && user) {
         try {
           const accessToken = await getAccessTokenSilently();
+          //  send access token to the server to authenticate the token and add the user to the database if the user does not exist.
+
           console.log(`Access Token: ${accessToken}`); // Log the access token
+          console.log(`User Name: ${user.name}`); // Log the user's name
+          console.log(`User Email: ${user.email}`); // Log the user's email
           navigate('/dashboard');
         } catch (error) {
           console.error('Failed to fetch access token:', error);
@@ -28,7 +32,14 @@ const Callback: React.FC = () => {
     };
 
     handleAuthentication();
-  }, [isLoading, isAuthenticated, error, getAccessTokenSilently, navigate]);
+  }, [
+    isLoading,
+    isAuthenticated,
+    user,
+    error,
+    getAccessTokenSilently,
+    navigate,
+  ]);
 
   return <PageLoading />;
 };
